@@ -11,6 +11,7 @@ import { TitledList } from "components/TitledList";
 import { createSimulationState, SimulationState } from "core/SimulationState";
 import { ReferencePage } from "surfaces/ReferencePage";
 import { OptionPage } from "surfaces/OptionPage";
+import { useI18n } from "data/i18n";
 
 const getDefaultCommands = (): Command[]=>{
 	const encoded = localStorage.getItem("HDS.CurrentCommandsText");
@@ -30,6 +31,8 @@ const getDefaultCommands = (): Command[]=>{
 };
 
 export const App: React.FC =  () => {
+	const t = useI18n();
+	console.log(t("items.weapon.MasterSword"));
 	const [page, setPageInState] = useState<string>("#simulation");
 	// Option States
 	const [interlaceInventory, setInterlaceInventory] = useState<boolean>(false);

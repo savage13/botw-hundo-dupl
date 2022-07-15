@@ -1,8 +1,11 @@
-import { stableSort } from "data/mergeSort";
-import { ItemStack, itemToItemData, ItemType } from "./Item";
+import { stableSort } from "data/stableSort";
+import { Item, ItemStack, ItemTab, itemToItemData, ItemType } from "data/item";
+import { createMaterialStack } from "data/item/ItemStack";
 
 /*
  * This is the data model common to GameData and VisibleInventory
+ * All public interface should have comment with [confirmed] or [need confirm] indicating whether something is confirmed to be the same in game
+ * cases tagged with [confirmed] must also have unit tests covering them
  */
 export class Slots {
 	private internalSlots: ItemStack[] = [];
@@ -13,15 +16,17 @@ export class Slots {
 		return this.internalSlots;
 	}
 	public deepClone(): Slots {
-		return new Slots(this.internalSlots.map(s=>({...s})));
+		// ItemStack is immutable so they do not need to be copied
+		return new Slots([...this.internalSlots]);
 	}
 	public get length(): number {
 		return this.internalSlots.length;
 	}
 
 	// Sort the item types as they appear in game. Arrows are also sorted amongst each other
+	// Individual tabs are not sorted
 	// input mCount = null will skip the optimization. Otherwise if mCount <= 1, do nothing
-	public sortItemType(mCount: number | null) {
+	public sortItemByTab(mCount: number | null) {
 		if(mCount === null){
 			mCount = this.internalSlots.length;
 		}
@@ -29,12 +34,17 @@ export class Slots {
 			return;
 		}
 		stableSort(this.internalSlots, (a,b)=>{
-			const aData = itemToItemData(a.item);
-			const bData = itemToItemData(b.item);
-			if(aData.type === ItemType.Arrow && bData.type === ItemType.Arrow){
-				return aData.sortOrder - bData.sortOrder;
+			//const aData = itemToItemData(a.item);
+			//const bData = itemToItemData(b.item);
+			if(a.item.type === ItemType.Arrow && b.item.type === ItemType.Arrow){
+				return a.item.sortOrder - b.item.sortOrder;
 			}
-			return aData.type - bData.type;
+			if(a.item.tab === b.item.tab && a.item.tab === ItemTab.Bow){
+				// arrows are always after bow
+				return a.item.type - b.item.type;
+			}
+			// otherwise sort by tab
+			return a.item.tab - b.item.tab;
 		});
 	}
 
@@ -43,59 +53,78 @@ export class Slots {
 	}
 
 	public addStackDirectly(stack: ItemStack): number {
-		const data = itemToItemData(stack.item);
-		if(data.stackable){
-			this.internalSlots.push({...stack});
+		//const data = itemToItemData(stack.item);
+		if(stack.item.stackable){
+			this.internalSlots.push(stack);
 			return 1;
 		}
+		const singleStack = stack.modify({count: 1});
 		for(let i=0;i<stack.count;i++){
-			this.internalSlots.push({...stack, count: 1});
+			this.internalSlots.push(singleStack);
 		}
 		return stack.count;
 	}
 	public addSlot(stack: ItemStack, mCount: number | null) {
-		this.internalSlots.push({...stack});
-		this.sortItemType(mCount);
+		this.internalSlots.push(stack);
+		this.sortItemByTab(mCount);
 	}
 
 	// remove item(s) start from slot
 	// return number of slots removed
-	public remove(item: string, count: number, slot: number): number {
+	public remove(item: Item, count: number, slot: number): number {
 		const oldLength = this.internalSlots.length;
 		let s = 0;
 		for(let i = 0; i<this.internalSlots.length && count > 0;i++){
-			if(this.internalSlots[i].item === item){
+			const stack = this.internalSlots[i];
+			if(stack.item === item){
 				if(s<slot){
+					// find the right slot
 					s++;
 				}else{
-					if(this.internalSlots[i].count<count){
-						count-=this.internalSlots[i].count;
-						this.internalSlots[i].count=0;
+					if(stack.count<count){
+						// this stack not enough to remove all
+						count-=stack.count;
+						this.internalSlots[i] = stack.modify({count:0});
 						
 					}else{
-						this.internalSlots[i].count-=count;
+						this.internalSlots[i] = stack.modify({count:stack.count-count});
 						break;
 					}
-					
 				}
 			}
 		}
-		
-		this.internalSlots = this.internalSlots.filter(({count})=>count>0);
+		this.removeZeroStackExceptArrows();
 		return oldLength-this.internalSlots.length;
+	}
+
+	removeZeroStackExceptArrows(): void {
+		this.internalSlots = this.internalSlots.filter(({item, count})=>{
+			return item.type === ItemType.Arrow || count > 0;
+		});
 	}
 
 	// Add something to inventory in game
 	// returns number of slots added
-	public add(item: string, count: number, equippedDuringReload: boolean, reloading: boolean, mCount: number | null): number {
+	public add(item: Item, count: number, equippedDuringReload: boolean, reloading: boolean, mCount: number | null): number {
 		if(mCount === null){
 			mCount = this.internalSlots.length;
 		}
 		//let added = false;
-		const data = itemToItemData(item);
-		// If item is stackable (arrow, material, spirit orbs)
-		// Check if there's already a slot, if so, add it to that and cap it at 999
-		if(data.stackable){
+		//const data = itemToItemData(item);
+
+		// If item is stackable (arrow, material, spirit orbs), do 999 Cap Check
+		// [confirmed] the 999 cap check always happens, even when mCount = 0 ( https://discord.com/channels/269611402854006785/269616041435332608/997404941754839060 )
+		// needs UT
+		if(item.stackable){
+			let slotIndexToAdd;
+			// 999 Cap Check is skipped if mCount is exactly 0
+			let shouldSkipCheck = mCount === 0;
+			if(item.type === ItemType.Arrow){
+				// for arrows, also skip check if there is no arrow (i.e )
+			}
+			// TODO arrow special check
+
+			// Check if there's already a slot, if so, add it to that and cap it at 999
 			for(let i = 0; i<this.internalSlots.length;i++){
 				if(this.internalSlots[i].item === item){
 					if(reloading){
@@ -104,10 +133,15 @@ export class Slots {
 							return 0;
 						}
 						// Otherwise add the stack directly
-						this.addSlot({item, count, equipped: equippedDuringReload}, mCount+1);
+						this.addSlot(createMaterialStack(item, count), mCount+1);
 						return 1;
 					}
-					this.internalSlots[i].count = Math.min(999, this.internalSlots[i].count+count);
+					// if not reloading, cap the slot at 999
+					const newCount = Math.min(999, this.internalSlots[i].count+count);
+					if(newCount != this.internalSlots[i].count){
+						this.internalSlots[i] = this.internalSlots[i].modify({count: newCount});
+					}
+					 
 					return 0;
 				}
 			}
@@ -115,17 +149,18 @@ export class Slots {
 		// Need to add new slot
 		// Key item check: if the key item or master sword already exists in the first tab, do not add
 		if(mCount != 0){
-			if(data.type === ItemType.Key || item === "MasterSword") {
+			if(item.repeatable) {// only unstackable key items and master sword is not repeatable
 				let i=0;
-				while(i<this.internalSlots.length && itemToItemData(this.internalSlots[i].item).type < data.type){
+				while(i<this.internalSlots.length && this.internalSlots[i].item.type < item.type){
 					i++;
 				}
-				for(;i<this.internalSlots.length && itemToItemData(this.internalSlots[i].item).type === data.type;i++){
+				for(;i<this.internalSlots.length && this.internalSlots[i].item.type === item.type;i++){
 					if(this.internalSlots[i].item === item){
 						// Found the key item/master sword, do not add
 						return 0;
 					}
 				}
+				// past first (maybe empty) tab, check pass
 			}
 		}
 		

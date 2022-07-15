@@ -6,10 +6,11 @@ type ItemSlotProps = {
   slot: DisplayableSlot
 };
 
-export const ItemSlot: React.FC<ItemSlotProps> = ({slot: {image, description, count, isBrokenSlot, isEquipped, displayCount}})=>{
+export const ItemSlot: React.FC<ItemSlotProps> = ({slot: {image, descKey, count, isBrokenSlot, isEquipped, displayCount}})=>{
+	// TODO localization
 	return (
 		<span className={clsx("ItemSlot", isBrokenSlot && "ItemSlotBroken", isEquipped && "ItemSlotEquipped")}>
-			<img className={clsx("ItemImage")} src={image} title={description}/>
+			<img className={clsx("ItemImage")} src={image} title={descKey}/>
 			{
 				displayCount && <span className={"ItemCount"}>
           x{count}
