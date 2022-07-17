@@ -6,135 +6,263 @@ weapon:
   # single-handed
   - MasterSword:
       repeatable: false
-  - TreeBranch
-  - Torch
-  - SoupLadle
-  - Boomerang
-  - SpringLoadedHammer
-  - TravelersSword
-  - SoldiersBroadsword
-  - KnightsBroadsword
-  - RoyalBroadsword
-  - ForestDwellersSword
-  - ZoraSword
-  - FeatheredEdge
-  - GerudoScimitar
-  - MoonlightScimitar
-  - ScimitarOfTheSeven
-  - EightfoldBlade
-  - AncientShortSword
-  - RustyBroadsword
-  - RoyalGuardsSword
-  - Flameblade
-  - Frostblade
-  - Thunderblade
-  - GoddessSword
-  - Sword
-  - SeaBreezeBoomerang
-  - BokoClub
-  - SpikedBokoClub
-  - DragonboneBokoClub
-  - LizalBoomerang
-  - LizalForkedBoomerang
-  - LizalTriBoomerang
-  - GuardianSword
-  - GuardianSwordPlus
-  - GuardianSwordPlusPlus
-  - LynelSword
-  - MightyLynelSword
-  - SavageLynelSword
-  - FireRod
-  - MeteorRod
-  - IceRod
-  - BlizzardRod
-  - LightningRod
-  - ThunderstormRod
-  - ViciousSickle
-  - DemonCarver
-  - OneHitObliterator
-  - BokoblinArm
-  - LizalfosArm
+      durability: 40
+  - TreeBranch:
+      durability: 4
+  - Torch:
+      durability: 8
+  - SoupLadle:
+      durability: 5
+  - Boomerang:
+      durability: 18
+  - SpringLoadedHammer:
+      durability: 80
+  - TravelersSword:
+      durability: 20
+  - SoldiersBroadsword:
+      durability: 23
+  - KnightsBroadsword:
+      durability: 27
+  - RoyalBroadsword:
+      durability: 36
+  - ForestDwellersSword:
+      durability: 27
+  - ZoraSword:
+      durability: 27
+  - FeatheredEdge:
+      durability: 27
+  - GerudoScimitar:
+      durability: 23
+  - MoonlightScimitar:
+      durability: 32
+  - ScimitarOfTheSeven:
+      durability: 60
+  - EightfoldBlade:
+      durability: 26
+  - AncientShortSword:
+      durability: 54
+  - RustyBroadsword:
+      durability: 8
+  - RoyalGuardsSword:
+      durability: 14
+  - Flameblade:
+      durability: 36
+  - Frostblade:
+      durability: 30
+  - Thunderblade:
+      durability: 36
+  - GoddessSword:
+      durability: 45
+  - Sword:
+      durability: 27
+  - SeaBreezeBoomerang:
+      durability: 20
+  - BokoClub:
+      durability: 12
+  - SpikedBokoClub:
+      durability: 14
+  - DragonboneBokoClub:
+      durability: 18
+  - LizalBoomerang:
+      durability: 17
+  - LizalForkedBoomerang:
+      durability: 23
+  - LizalTriBoomerang:
+      durability: 27
+  - GuardianSword:
+      durability: 17
+  - GuardianSwordPlus:
+      durability: 26
+  - GuardianSwordPlusPlus:
+      durability: 32
+  - LynelSword:
+      durability: 26
+  - MightyLynelSword:
+      durability: 32
+  - SavageLynelSword:
+      durability: 41
+  - FireRod:
+      durability: 14
+  - MeteorRod:
+      durability: 32
+  - IceRod:
+      durability: 14
+  - BlizzardRod:
+      durability: 32
+  - LightningRod:
+      durability: 14
+  - ThunderstormRod:
+      durability: 32
+  - ViciousSickle:
+      durability: 14
+  - DemonCarver:
+      durability: 25
+  - OneHitObliterator:oho:
+      durability: 40
+  - BokoblinArm:
+      durability: 5
+  - LizalfosArm:
+      durability: 8
   # 2-handed
-  - KorokLeaf
-  - FarmingHoe
-  - BoatOar
-  - WoodcuttersAxe
-  - DoubleAxe
-  - IronSledgehammer
-  - GiantBoomerang
-  - TravelersClaymore
-  - SoldiersClaymore
-  - KnightsClaymore
-  - RoyalClaymore
-  - SilverLongsword
-  - CobbleCrusher
-  - StoneSmasher
-  - BoulderBreaker
-  - GoldenClaymore
-  - EightfoldLongblade
-  - EdgeOfDuality
-  - AncientBladesaw
-  - RustyClaymore
-  - RoyalGuardsClaymore
-  - GreatFlameblade
-  - GreatFrostblade
-  - GreatThunderblade
-  - SwordOfTheSixSages
-  - BiggoronsSword
-  - FierceDeitySword
-  - BokoBat
-  - SpikedBokoBat
-  - DragonboneBokoBat
-  - MoblinClub
-  - SpikedMoblinClub
-  - DragonboneMoblinClub
-  - AncientBattleAxe
-  - AncientBattleAxePlus
-  - AncientBattleAxePlusPlus
-  - LynelCrusher
-  - MightyLynelCrusher
-  - SavageLynelCrusher
-  - Windcleaver
-  - MoblinArm
+  - KorokLeaf:
+      durability: 25
+  - FarmingHoe:
+      durability: 6
+  - BoatOar:
+      durability: 8
+  - WoodcuttersAxe:
+      durability: 47
+  - DoubleAxe:
+      durability: 52
+  - IronSledgehammer:
+      durability: 40
+  - GiantBoomerang:
+      durability: 40
+  - TravelersClaymore:
+      durability: 20
+  - SoldiersClaymore:
+      durability: 25
+  - KnightsClaymore:
+      durability: 30
+  - RoyalClaymore:
+      durability: 40
+  - SilverLongsword:
+      durability: 30
+  - CobbleCrusher:
+      durability: 30
+  - StoneSmasher:
+      durability: 40
+  - BoulderBreaker:
+      durability: 60
+  - GoldenClaymore:
+      durability: 30
+  - EightfoldLongblade:
+      durability: 25
+  - EdgeOfDuality:
+      durability: 35
+  - AncientBladesaw:
+      durability: 50
+  - RustyClaymore:
+      durability: 10
+  - RoyalGuardsClaymore:
+      durability: 15
+  - GreatFlameblade:
+      durability: 50
+  - GreatFrostblade:
+      durability: 40
+  - GreatThunderblade:
+      durability: 50
+  - SwordOfTheSixSages:
+      durability: 50
+  - BiggoronsSword:
+      durability: 60
+  - FierceDeitySword:
+      durability: 35
+  - BokoBat:
+      durability: 8
+  - SpikedBokoBat:
+      durability: 12
+  - DragonboneBokoBat:
+      durability: 16
+  - MoblinClub:
+      durability: 12
+  - SpikedMoblinClub:
+      durability: 18
+  - DragonboneMoblinClub:
+      durability: 24
+  - AncientBattleAxe:
+      durability: 15
+  - AncientBattleAxePlus:
+      durability: 20
+  - AncientBattleAxePlusPlus:
+      durability: 25
+  - LynelCrusher:
+      durability: 20
+  - MightyLynelCrusher:
+      durability: 25
+  - SavageLynelCrusher:
+      durability: 35
+  - Windcleaver:
+      durability: 25
+  - MoblinArm:
+      durability: 5
   # spears
-  - WoodenMop
-  - FarmersPitchfork
-  - FishingHarpoon
-  - ThrowingSpear
-  - TravelersSpear
-  - SoldiersSpear
-  - KnightsHalberd
-  - RoyalHalberd
-  - ForestDwellersSpear
-  - ZoraSpear
-  - SilverscaleSpear
-  - CeremonialTrident
-  - LightscaleTrident
-  - Drillshaft
-  - FeatheredSpear
-  - GerudoSpear
-  - SerpentineSpear
-  - AncientSpear
-  - RustyHalberd
-  - RoyalGuardsSpear
-  - Flamespear
-  - Frostspear
-  - Thunderspear
-  - BokoSpear
-  - SpikedBokoSpear
-  - DragonboneBokoSpear
-  - MoblinSpear
-  - SpikedMoblinSpear
-  - DragonboneMoblinSpear
-  - LizalSpear
-  - EnhancedLizalSpear
-  - ForkedLizalSpear
-  - GuardianSpear
-  - GuardianSpearPlus
-  - GuardianSpearPlusPlus
-  - LynelSpear
-  - MightyLynelSpear
-  - SavageLynelSpear
+  - WoodenMop:
+      durability: 8
+  - FarmersPitchfork:
+      durability: 12
+  - FishingHarpoon:
+      durability: 12
+  - ThrowingSpear:
+      durability: 20
+  - TravelersSpear:
+      durability: 30
+  - SoldiersSpear:
+      durability: 35
+  - KnightsHalberd:
+      durability: 40
+  - RoyalHalberd:
+      durability: 50
+  - ForestDwellersSpear:
+      durability: 35
+  - ZoraSpear:
+      durability: 40
+  - SilverscaleSpear:
+      durability: 40
+  - CeremonialTrident:
+      durability: 40
+  - LightscaleTrident:
+      durability: 70
+  - Drillshaft:
+      durability: 40
+  - FeatheredSpear:
+      durability: 35
+  - GerudoSpear:
+      durability: 35
+  - SerpentineSpear:
+      durability: 35
+  - AncientSpear:
+      durability: 50
+  - RustyHalberd:
+      durability: 15
+  - RoyalGuardsSpear:
+      durability: 15
+  - Flamespear:
+      durability: 50
+  - Frostspear:
+      durability: 40
+  - Thunderspear:
+      durability: 50
+  - BokoSpear:
+      durability: 12
+  - SpikedBokoSpear:
+      durability: 15
+  - DragonboneBokoSpear:
+      durability: 20
+  - MoblinSpear:
+      durability: 15
+  - SpikedMoblinSpear:
+      durability: 20
+  - DragonboneMoblinSpear:
+      durability: 25
+  - LizalSpear:
+      durability: 18
+  - EnhancedLizalSpear:
+      durability: 22
+  - ForkedLizalSpear:
+      durability: 28
+  - GuardianSpear:
+      durability: 20
+  - GuardianSpearPlus:
+      durability: 25
+  - GuardianSpearPlusPlus:
+      durability: 35
+  - LynelSpear:
+      durability: 25
+  - MightyLynelSpear:
+      durability: 35
+  - SavageLynelSpear:
+      durability: 45
   # "ANY" placeholder
   - Weapon
 bow:
@@ -142,31 +270,56 @@ bow:
     stackable: false
   entries:
   - BowOfLight
-  - WoodenBow
-  - TravelersBow
-  - SoldiersBow
-  - KnightsBow
-  - RoyalBow
-  - ForestDwellersBow
-  - SilverBow
-  - SwallowBow
-  - FalconBow
-  - GreatEagleBow
-  - GoldenBow
-  - PhrenicBow
-  - AncientBow
-  - RoyalGuardsBow
-  - TwilightBow
-  - BokoBow
-  - SpikedBokoBow
-  - DragonBoneBokoBow
-  - LizalBow
-  - StrengthenedLizalBow
-  - SteelLizalBow
-  - LynelBow
-  - MightyLynelBow
-  - SavageLynelBow
-  - DuplexBow
+  - WoodenBow:
+      durability: 20
+  - TravelersBow:
+      durability: 22
+  - SoldiersBow:
+      durability: 36
+  - KnightsBow:
+      durability: 48
+  - RoyalBow:
+      durability: 60
+  - ForestDwellersBow:
+      durability: 35
+  - SilverBow:
+      durability: 40
+  - SwallowBow:
+      durability: 30
+  - FalconBow:
+      durability: 50
+  - GreatEagleBow:
+      durability: 60
+  - GoldenBow:
+      durability: 60
+  - PhrenicBow:
+      durability: 45
+  - AncientBow:
+      durability: 120
+  - RoyalGuardsBow:
+      durability: 20
+  - TwilightBow:
+      durability: 100
+  - BokoBow:
+      durability: 16
+  - SpikedBokoBow:
+      durability: 20
+  - DragonBoneBokoBow:
+      durability: 30
+  - LizalBow:
+      durability: 25
+  - StrengthenedLizalBow:
+      durability: 35
+  - SteelLizalBow:
+      durability: 50
+  - LynelBow:
+      durability: 30
+  - MightyLynelBow:
+      durability: 35
+  - SavageLynelBow:
+      durability: 45
+  - DuplexBow:
+      durability: 18
   # "ANY" placeholder
   - Bow
 arrow:
@@ -176,44 +329,77 @@ arrow:
   - IceArrow
   - ShockArrow
   - BombArrow
-  - AncientArrow
+  - AncientArrow:aa
 shield:
   global:
     stackable: false
   entries:
-  - HylianShield
-  - PotLid
-  - WoodenShield
-  - EmblazonedShield
-  - HuntersShield
-  - FishermansShield
-  - TravelersShield
-  - SoldiersShield
-  - KnightsShield
-  - RoyalShield
-  - ForestDwellersShield
-  - SilverShield
-  - KiteShield
-  - GerudoShield
-  - RadiantShield
-  - Daybreaker
-  - ShieldOfTheMindsEye
-  - AncientShield
-  - RustyShield
-  - RoyalGuardsShield
-  - HerosShield
-  - BokoShield
-  - SpikedBokoShield
-  - DragonboneBokoShield
-  - LizalShield
-  - ReinforcedLizalShield
-  - SteelLizalShield
-  - GuardianShield
-  - GuardianShieldPlus
-  - GuardianShieldPlusPlus
-  - LynelShield
-  - MightyLynelShield
-  - SavageLynelShield
+  - HylianShield:
+      durability: 800
+  - PotLid:
+      durability: 10
+  - WoodenShield:
+      durability: 12
+  - EmblazonedShield:
+      durability: 12
+  - HuntersShield:
+      durability: 10
+  - FishermansShield:
+      durability: 10
+  - TravelersShield:
+      durability: 12
+  - SoldiersShield:
+      durability: 16
+  - KnightsShield:
+      durability: 23
+  - RoyalShield:
+      durability: 29
+  - ForestDwellersShield:
+      durability: 18
+  - SilverShield:
+      durability: 20
+  - KiteShield:
+      durability: 16
+  - GerudoShield:
+      durability: 20
+  - RadiantShield:
+      durability: 26
+  - Daybreaker:
+      durability: 60
+  - ShieldOfTheMindsEye:
+      durability: 16
+  - AncientShield:
+      durability: 32
+  - RustyShield:
+      durability: 16
+  - RoyalGuardsShield:
+      durability: 14
+  - HerosShield:
+      durability: 90
+  - BokoShield:
+      durability: 5
+  - SpikedBokoShield:
+      durability: 7
+  - DragonboneBokoShield:
+      durability: 8
+  - LizalShield:
+      durability: 8
+  - ReinforcedLizalShield:
+      durability: 12
+  - SteelLizalShield:
+      durability: 15
+  - GuardianShield:
+      durability: 10
+  - GuardianShieldPlus:
+      durability: 13
+  - GuardianShieldPlusPlus:
+      durability: 20
+  - LynelShield:
+      durability: 12
+  - MightyLynelShield:
+      durability: 15
+  - SavageLynelShield:
+      durability: 20
   # "ANY" placeholder
   - Shield
 armor:
@@ -913,38 +1099,38 @@ key:
       repeatable: false
   - MiphasGrace:
       repeatable: false
-      animated: true
+      animated: false # not supported yet
   - RevalisGale:
       repeatable: false
-      animated: true
+      animated: false # not supported yet
   - DaruksProtection:
       repeatable: false
-      animated: true
+      animated: false # not supported yet
   - UrbosasFury:
       repeatable: false
-      animated: true
+      animated: false # not supported yet
   - MiphasGracePlus:
       repeatable: false
-      animated: true
+      animated: false # not supported yet
   - RevalisGalePlus:
       repeatable: false
-      animated: true
+      animated: false # not supported yet
   - DaruksProtectionPlus:
       repeatable: false
-      animated: true
+      animated: false # not supported yet
   - UrbosasFuryPlus:
       repeatable: false
-      animated: true
+      animated: false # not supported yet
   - Paraglider:
       repeatable: false
   - RutasEmblem: 
-      animated: true
+      animated: false # not supported yet
   - MedohsEmblem: 
-      animated: true
+      animated: false # not supported yet
   - RudaniasEmblem: 
-      animated: true
+      animated: false # not supported yet
   - NaborissEmblem: 
-      animated: true
+      animated: false # not supported yet
   - SpiritOrb: 
       animated: true
   - KorokSeed
@@ -991,4 +1177,3 @@ key:
   - TravelMedallion:
       repeatable: false
       animated: true
-}

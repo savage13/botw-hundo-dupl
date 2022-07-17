@@ -11,7 +11,7 @@ export enum ItemType {
     Food = 8,
     Key = 9,
     Flag = -1 // flags in game data, not actual items. such as HasRitoSoulPlus
-};
+}
 // Which tab the item is in. These specifically matches ItemType in case we need it in the future
 export enum ItemTab {
     Weapon = 0,
@@ -22,6 +22,40 @@ export enum ItemTab {
     Food = 8,
     Key = 9,
     None = -1,
+}
+
+export const iterateItemTabs = (): ItemTab[] => [
+	ItemTab.Weapon,
+	ItemTab.Bow,
+	ItemTab.Shield,
+	ItemTab.Armor,
+	ItemTab.Material,
+	ItemTab.Food,
+	ItemTab.Key
+];
+
+export const getTabFromType = (type: ItemType): ItemTab => {
+	switch(type){
+		case ItemType.Weapon:
+			return ItemTab.Weapon;
+		case ItemType.Bow:
+		case ItemType.Arrow:
+			return ItemTab.Bow;
+		case ItemType.Shield:
+			return ItemTab.Shield;
+		case ItemType.ArmorUpper:
+		case ItemType.ArmorMiddle:
+		case ItemType.ArmorLower:
+			return ItemTab.Armor;
+		case ItemType.Material:
+			return ItemTab.Material;
+		case ItemType.Food:
+			return ItemTab.Food;
+		case ItemType.Key:
+			return ItemTab.Key;
+		default:
+			return ItemTab.None;
+	}
 };
 export interface Item {
     // The id of Item, which is its name in UpperCamelCase in English as it appears in English, with special characters like ' removed and + turned into Plus
@@ -57,10 +91,22 @@ export interface ItemStack {
     readonly equipped: boolean,
     // function to create a new stack based on this stack and option
     modify(option: Partial<ItemStack>): ItemStack,
+    // function to create a new stack based on this stack and meta option
+    modifyMeta(metaOption: MetaOption): ItemStack,
     // check if 2 stacks are equal: same item, count, equipped nd metadata
     equals(other: ItemStack): boolean,
     // check if everything equals except for equipped
     equalsExceptForEquipped(other: ItemStack): boolean,
+    // check if item and meta equal, used for stacking
+    canStack(other: ItemStack): boolean,
 }
 
+export type ItemIdMap = { [id: string]: Item};
 
+// the extra data supported when inputing an item
+export type MetaOption = {
+    //life value, count or durability*100
+    life?: number,
+    //equipped. 
+    equip?: boolean,
+}

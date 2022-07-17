@@ -6,8 +6,8 @@ declare module '*.items.yaml' {
         stackable: boolean,
         // If the item is repeatable. Default: true. If repeatable is false, stackable is automatically false
         repeatable: boolean,
-        // (unused) Durability of equipments. Integer value. Pot lid is 10
-        _durability: number,
+        // Durability of equipments. Integer value. Pot lid is 10
+        durability: number,
         // armor subtype
         subtype: "upper" | "middle" | "lower"
     }>>;

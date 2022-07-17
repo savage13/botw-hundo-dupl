@@ -1,42 +1,63 @@
-import { Item, ItemType } from "./type";
+import { ItemIdMap, ItemStack } from "./type";
 
-type ItemData = {
-	item: string,
-	image: string,
-	type: ItemType,
-	repeatable: boolean,
-	stackable: boolean,
-    animated: boolean
-	animatedImage?: string,
-	sortOrder: number,
-}
+// Legacy item names before all items were added
 
-const ItemToData: Record<string, ItemData> = {};
-
-export const deprecatedRegister = (item: Item) => {
-	const sortOrder = -1;//TypeToCount[type];
-	//TypeToCount[type]++;
-	const data: ItemData = {
-		item: item.id,
-		type: item.type,
-		repeatable: item.repeatable,
-		stackable: item.stackable,
-		animated: item.animatedImage !== item.image,
-		sortOrder,
-		animatedImage: item.animatedImage,
-		image: item.image
-	};
-	ItemToData[item.id] = data;
+const LegacyMap = {
+	"Slate": "SheikahSlate",
+	"Glider": "Paraglider",
+	"SpiritOrb": "SpiritOrb",
+	"Lotus": "FleetLotusSeeds",
+	"SilentPrincess": "SilentPrincess",
+	"Honey": "CourserBeeHoney",
+	"Acorn": "Acorn",
+	"FaroshScale": "FaroshsScale",
+	"FaroshClaw": "FaroshsClaw",
+	"FaroshHorn": "ShardOfFaroshsHorn",
+	"HeartyBass": "HeartyBass",
+	"Beetle": "EnergeticRhinoBeetle",
+	"Opal": "Opal",
+	"Diamond": "Diamond",
+	"Tail": "LizalfosTail",
+	"Spring": "AncientSpring",
+	"Shaft": "AncientShaft",
+	"Core": "AncientCore",
+	"Wood": "Wood",
+	"Rushroom": "Rushroom",
+	"Screw": "AncientScrew",
+	"HyruleBass": "HyruleBass",
+	"LizalfosHorn": "LizalfosHorn",
+	"LizalfosTalon": "LizalfosTalon",
+	"Weapon": "Weapon",
+	"Bow": "Bow",
+	"NormalArrow": "NormalArrow",
+	"FireArrow": "FireArrow",
+	"IceArrow": "IceArrow",
+	"ShockArrow": "ShockArrow",
+	"BombArrow": "BombArrow",
+	"AncientArrow": "AncientArrow",
+	"Shield": "Shield",
+	"Apple": "Apple",
+	"HylianShroom": "HylianShroom",
+	"SpicyPepper": "SpicyPepper",
+	"EnduraShroom": "EnduraShroom",
+	"HeartyRadish": "HeartyRadish",
+	"BigHeartyRadish": "BigHeartyRadish",
+	"Fairy": "Fairy",
+	"MasterSword": "MasterSword",
+	"ZoraArmor": "ZoraArmor"
 };
 
-export const itemToItemData = (item: Item): ItemData => ItemToData[item.id] as ItemData;
-export const itemExists = (item: Item): boolean => !!itemToItemData(item);
-// export const itemToArrowType = (item: Item): string => {
-// 	if(itemToItemData(item).type === ItemType.Arrow){
-// 		const str = `${item}`;
-// 		return str.substring(0,str.length-5);
-// 	}
-// 	return "";
-// };
-
-export const getAllItems = (): string[] => Object.keys(ItemToData);
+export const searchLegacyItemNames = (name: string, idMap: ItemIdMap): ItemStack | undefined => {
+	if (name in LegacyMap){
+		return idMap[LegacyMap[name as keyof typeof LegacyMap]].createDefaultStack();
+	}
+	if(name === "SpeedFood"){
+		// TODO: effect metadata
+		return idMap.SteamedFruit.createDefaultStack();
+	}
+	if(name === "EnduraFood"){
+		// TODO: effect metadata
+		return idMap.MushroomSkewer.createDefaultStack();
+	}
+	return undefined;
+};

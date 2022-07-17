@@ -4,6 +4,7 @@ import "./index.css";
 import {App} from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { LanguageProvider } from "data/i18n";
+import { ItemProvider } from "data/item";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -11,7 +12,10 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<LanguageProvider>
-			<App />
+			<ItemProvider>
+				<App />
+			</ItemProvider>
+			
 		</LanguageProvider>
 		
 	</React.StrictMode>

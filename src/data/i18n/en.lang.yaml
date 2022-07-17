@@ -1,5 +1,5 @@
 items:
-  weapon:
+  Weapon:
     # single hand
     MasterSword: Master Sword
     TreeBranch: Tree Branch
@@ -132,7 +132,7 @@ items:
     MightyLynelSpear: Mighty Lynel Spear
     SavageLynelSpear: Savage Lynel Spear
     Weapon: Weapon Placeholder
-  bow:
+  Bow:
     BowOfLight: Bow of Light
     WoodenBow: Wooden Bow
     TravelersBow: Traveler's Bow
@@ -160,14 +160,14 @@ items:
     SavageLynelBow: Savage Lynel Bow
     DuplexBow: Duplex Bow
     Bow: Bow Placeholder
-  arrow:
+  Arrow:
     NormalArrow: Arrow
     FireArrow: Fire Arrow
     IceArrow: Ice Arrow
     ShockArrow: Shock Arrow
     BombArrow: Bomb Arrow
     AncientArrow: Ancient Arrow
-  shield:
+  Shield:
     HylianShield: Hylian Shield
     PotLid: Pot Lid
     WoodenShield: Wooden Shield
@@ -202,116 +202,117 @@ items:
     MightyLynelShield: Mighty Lynel Shield
     SavageLynelShield: Savage Lynel Shield
     Shield: Shield Placeholder
-  armor:
-    OldShirt: Old Shirt
-    WellWornTrousers: Well-Worn Trousers
-    ChampionsTunic: Champion's Tunic
+  ArmorUpper:
     HylianHood: Hylian Hood
-    HylianTunic: Hylian Tunic
-    HylianTrousers: Hylian Trousers
     SoldiersHelm: Soldier's Helm
-    SoldiersArmor: Soldier's Armor
-    SoldiersGreaves: Soldier's Greaves
     AmberEarrings: Amber Earrings
-    WarmDoublet: Warm Doublet
     RubyCirclet: Ruby Circlet
     SnowquillHeaddress: Snowquill Headdress
-    SnowquillTunic: Snowquill Tunic
-    SnowquillTrousers: Snowquill Trousers
     SapphireCirclet: Sapphire Circlet
     DesertVoeHeadband: Desert Voe Headband
-    DesertVoeSpaulder: Desert Voe Spaulder
-    DesertVoeTrousers: Desert Voe Trousers
     GerudoVeil: Gerudo Veil
-    GerudoTop: Gerudo Top
-    GerudoSirwal: Gerudo Sirwal
     TopazEarrings: Topaz Earrings
     RubberHelm: Rubber Helm
-    RubberArmor: Rubber Armor
-    RubberTights: Rubber Tights
     FlamebreakerHelm: Flamebreaker Helm
-    FlamebreakerArmor: Flamebreaker Armor
-    FlamebreakerBoots: Flamebreaker Boots
     OpalEarrings: Opal Earrings
     ZoraHelm: Zora Helm
-    ZoraArmor: Zora Armor
-    ZoraGreaves: Zora Greaves
     StealthMask: Stealth Mask
-    StealthChestGuard: Stealth Chest Guard
-    StealthTights: Stealth Tights
     SheiksMask: Sheik's Mask
     ThunderHelm: Thunder Helm
     ClimbersBandanna: Climber's Bandanna
-    ClimbingGear: Climbing Gear
-    ClimbingBoots: Climbing Boots
     BarbarianHelm: Barbarian Helm
-    BarbarianArmor: Barbarian Armor
-    BarbarianLegWraps: Barbarian Leg Wraps
     FierceDeityMask: Fierce Deity Mask
-    FierceDeityArmor: Fierce Deity Armor
-    FierceDeityBoots: Fierce Deity Boots
     RadiantMask: Radiant Mask
-    RadiantShirt: Radiant Shirt
-    RadiantTights: Radiant Tights
     DiamondCirclet: Diamond Circlet
     AncientHelm: Ancient Helm
-    AncientCuirass: Ancient Cuirass
-    AncientGreaves: Ancient Greaves
-    SandBoots: Sand Boots
-    SnowBoots: Snow Boots
     BokoblinMask: Bokoblin Mask
     MoblinMask: Moblin Mask
     LizalfosMask: Lizalfos Mask
     LynelMask: Lynel Mask
     DarkHood: Dark Hood
-    DarkTunic: Dark Tunic
-    DarkTrousers: Dark Trousers
     CapOfTime: Cap of Time
-    TunicOfTime: Tunic of Time
-    TrousersOfTime: Trousers of Time
     CapOfTheWind: Cap of the Wind
-    TunicOfTheWind: Tunic of the Wind
-    TrousersOfTheWind: Trousers of the Wind
     CapOfTwilight: Cap of Twilight
-    TunicOfTwilight: Tunic of Twilight
-    TrousersOfTwilight: Trousers of Twilight
-    CapOfTheSky: Cap of the Sky
-    TunicOfTheSky: Tunic of the Sky
-    TrousersOfTheSky: Trousers of the Sky
-    CapOfTheHero: Cap of the Hero
-    TunicOfTheHero: Tunic of the Hero
-    TrousersOfTheHero: Trousers of the Hero
     CapOfTheWild: Cap of the Wild
-    TunicOfTheWild: Tunic of the Wild
-    TrousersOfTheWild: Trousers of the Wild
-    NintendoSwitchShirt: Nintendo Switch Shirt
+    CapOfTheSky: Cap of the Sky
+    CapOfTheHero: Cap of the Hero
     KorokMask: Korok Mask
     MajorasMask: Majora's Mask
     TinglesHood: Tingle's Hood
-    TinglesShirt: Tingle's Shirt
-    TinglesTights: Tingle's Tights
     MidnasHelmet: Midna's Helmet
     PhantomHelmet: Phantom Helmet
-    PhantomArmor: Phantom Armor
-    PhantomGreaves: Phantom Greaves
-    IslandLobsterShirt: Island Lobster Shirt
     RaviosHood: Ravio's Hood
     ZantsHelmet: Zant's Helmet
     RoyalGuardCap: Royal Guard Cap
-    RoyalGuardUniform: Royal Guard Uniform
-    RoyalGuardBoots: Royal Guard Boots
     PhantomGanonSkull: Phantom Ganon Skull
-    PhantomGanonArmor: Phantom Ganon Armor
-    PhantomGanonGreaves: Phantom Ganon Greaves
     VahRutaDivineHelm: Vah Ruta Divine Helm
     VahMedohDivineHelm: Vah Medoh Divine Helm
     VahRudaniaDivineHelm: Vah Rudania Divine Helm
     VahNaborisDivineHelm: Vah Naboris Divine Helm
     SalvagerHeadwear: Salvager Headwear
+  ArmorMiddle:
+    OldShirt: Old Shirt
+    ChampionsTunic: Champion's Tunic
+    HylianTunic: Hylian Tunic
+    SoldiersArmor: Soldier's Armor
+    WarmDoublet: Warm Doublet
+    SnowquillTunic: Snowquill Tunic
+    DesertVoeSpaulder: Desert Voe Spaulder
+    GerudoTop: Gerudo Top
+    RubberArmor: Rubber Armor
+    FlamebreakerArmor: Flamebreaker Armor
+    ZoraArmor: Zora Armor
+    StealthChestGuard: Stealth Chest Guard
+    ClimbingGear: Climbing Gear
+    BarbarianArmor: Barbarian Armor
+    FierceDeityArmor: Fierce Deity Armor
+    RadiantShirt: Radiant Shirt
+    AncientCuirass: Ancient Cuirass
+    DarkTunic: Dark Tunic
+    TunicOfTime: Tunic of Time
+    TunicOfTheWind: Tunic of the Wind
+    TunicOfTwilight: Tunic of Twilight
+    TunicOfTheSky: Tunic of the Sky
+    TunicOfTheHero: Tunic of the Hero
+    TunicOfTheWild: Tunic of the Wild
+    NintendoSwitchShirt: Nintendo Switch Shirt
+    TinglesShirt: Tingle's Shirt
+    PhantomArmor: Phantom Armor
+    IslandLobsterShirt: Island Lobster Shirt
+    RoyalGuardUniform: Royal Guard Uniform
+    PhantomGanonArmor: Phantom Ganon Armor
     SalvagerVest: Salvager Vest
+  ArmorLower:
+    WellWornTrousers: Well-Worn Trousers
+    HylianTrousers: Hylian Trousers
+    SoldiersGreaves: Soldier's Greaves
+    SnowquillTrousers: Snowquill Trousers
+    DesertVoeTrousers: Desert Voe Trousers
+    GerudoSirwal: Gerudo Sirwal
+    RubberTights: Rubber Tights
+    FlamebreakerBoots: Flamebreaker Boots
+    ZoraGreaves: Zora Greaves
+    StealthTights: Stealth Tights
+    ClimbingBoots: Climbing Boots
+    BarbarianLegWraps: Barbarian Leg Wraps
+    FierceDeityBoots: Fierce Deity Boots
+    RadiantTights: Radiant Tights
+    AncientGreaves: Ancient Greaves
+    SandBoots: Sand Boots
+    SnowBoots: Snow Boots
+    DarkTrousers: Dark Trousers
+    TrousersOfTime: Trousers of Time
+    TrousersOfTheWind: Trousers of the Wind
+    TrousersOfTwilight: Trousers of Twilight
+    TrousersOfTheSky: Trousers of the Sky
+    TrousersOfTheHero: Trousers of the Hero
+    TrousersOfTheWild: Trousers of the Wild
+    TinglesTights: Tingle's Tights
+    PhantomGreaves: Phantom Greaves
+    RoyalGuardBoots: Royal Guard Boots
+    PhantomGanonGreaves: Phantom Ganon Greaves
     SalvagerTrousers: Salvager Trousers
-    Armor: Armor Placeholder
-  material:
+  Material:
     HeartyDurian: Hearty Durian
     PalmFruit: Palm Fruit
     Apple: Apple
@@ -319,7 +320,7 @@ items:
     Hydromelon: Hydromelon
     SpicyPepper: Spicy Pepper
     Voltfruit: Voltfruit
-    Lotus: Fleet-Lotus Seeds
+    FleetLotusSeeds: Fleet-Lotus Seeds
     MightyBananas: Mighty Bananas
     BigHeartyTruffle: Big Hearty Truffle
     HeartyTruffle: Hearty Truffle
@@ -353,7 +354,7 @@ items:
     RawBirdThigh: Raw Bird Thigh
     RawMeat: Raw Meat
     RawBirdDrumstick: Raw Bird Drumstick
-    Honey: Courser Bee Honey
+    CourserBeeHoney: Courser Bee Honey
     HylianRice: Hylian Rice
     BirdEgg: Bird Egg
     TabanthaWheat: Tabantha Wheat
@@ -377,7 +378,7 @@ items:
     FaroshScale: Farosh's Scale
     FaroshClaw: Farosh's Claw
     ShardOfFaroshsFang: Shard of Farosh's Fang
-    FaroshHorn: Shard of Farosh's Horn
+    ShardOfFaroshsHorn: Shard of Farosh's Horn
     HeartySalmon: Hearty Salmon
     HeartyBlueshellSnail: Hearty Blueshell Snail
     HeartyBass: Hearty Bass
@@ -407,7 +408,7 @@ items:
     RestlessCricket: Restless Cricket
     BladedRhinoBeetle: Bladed Rhino Beetle
     RuggedRhinoBeetle: Rugged Rhino Beetle
-    Beetle: Energetic Rhino Beetle
+    EnergeticRhinoBeetle: Energetic Rhino Beetle
     SunsetFirefly: Sunset Firefly
     HotFootedFrog: Hot-Footed Frog
     TirelessFrog: Tireless Frog
@@ -430,7 +431,7 @@ items:
     MoblinGuts: Moblin Guts
     LizalfosHorn: Lizalfos Horn
     LizalfosTalon: Lizalfos Talon
-    Tail: Lizalfos Tail
+    LizalfosTail: Lizalfos Tail
     IcyLizalfosTail: Icy Lizalfos Tail
     RedLizalfosTail: Red Lizalfos Tail
     YellowLizalfosTail: Yellow Lizalfos Tail
@@ -454,14 +455,14 @@ items:
     HinoxToenail: Hinox Toenail
     HinoxTooth: Hinox Tooth
     HinoxGuts: Hinox Guts
-    Screw: Ancient Screw
-    Spring: Ancient Spring
+    AncientScrew: Ancient Screw
+    AncientSpring: Ancient Spring
     AncientGear: Ancient Gear
-    Shaft: Ancient Shaft
-    Core: Ancient Core
+    AncientShaft: Ancient Shaft
+    AncientCore: Ancient Core
     GiantAncientCore: Giant Ancient Core
     Wood: Wood
-  food:
+  Food:
     SimmeredFruit: Simmered Fruit
     CopiousSimmeredFruit: Copious Simmered Fruit
     MushroomSkewer: Mushroom Skewer
@@ -579,9 +580,7 @@ items:
     Elixir: Elixir
     HeartyElixir: Hearty Elixir
     EnergizingElixir: Energizing Elixir
-    EnduraFood: Generic Enduring Food
     EnduringElixir: Enduring Elixir
-    SpeedFood: Generic Hasty Food
     HastyElixir: Hasty Elixir
     FireproofElixir: Fireproof Elixir
     SpicyElixir: Spicy Elixir
@@ -655,8 +654,8 @@ items:
     FrozenCrab: Frozen Crab
     FrozenRiverSnail: Frozen River Snail
     IcyHeartyBlueshellSnail: Icy Hearty Blueshell Snail
-  key:
-    Slate: Sheikah Slate
+  Key:
+    SheikahSlate: Sheikah Slate
     MiphasGrace: Mipha's Grace
     RevalisGale: Revali's Gale
     DaruksProtection: Daruk's Protection
@@ -665,7 +664,7 @@ items:
     RevalisGalePlus: Revali's Gale +
     DaruksProtectionPlus: Daruk's Protection +
     UrbosasFuryPlus: Urbosa's Fury +
-    Glider: Paraglider
+    Paraglider: Paraglider
     RutasEmblem: Ruta's Emblem
     MedohsEmblem: Medoh's Emblem
     RudaniasEmblem: Rudania's Emblem
