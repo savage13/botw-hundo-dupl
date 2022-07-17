@@ -15,4 +15,3 @@ export class ItemStackCommandWrapper {
 		return [this.stack, this.number];
 	}
 }
-

@@ -91,4 +91,3 @@ const flattenInTo = (key: string, obj: StringTree | string, outMap: FlatLangMap)
 		flattenInTo(key+"."+nextKey, obj[nextKey], outMap);
 	}
 };
-
