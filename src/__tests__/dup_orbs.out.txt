@@ -3,3 +3,5 @@ Save
 
 Initialize 5 Diamond 1 Slate 1 Glider 4 Orb 4 Orb 4 Orb
 Break 4 Slots
+
+Init GameData 5 Diamond 1 Slate 1 Glider 4 Orb

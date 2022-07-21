@@ -5,4 +5,3 @@ Break 4 Slots
 Reload
 Save
 Reload
-Sync GameData
