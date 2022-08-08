@@ -8,6 +8,10 @@ export const ReferencePage: React.FC = React.memo(()=>{
 		<div className="OtherPage">
 			<TitledList title="Command Reference">
 				<div className="OtherPageContent">
+					<Header>Reload Walkthrough</Header>
+          <BodyText>
+            Reloads are the most complex operation within IST and in the Simulator. See <a href="https://restite.org/reload">a detailed explaination</a> of how they work.
+          </BodyText>
 					<Header>Item Syntax</Header>
 					<BodyText>
 						Item are specified by using <Emphasized>search keys</Emphasized> and <Emphasized>metadata</Emphasized>.
